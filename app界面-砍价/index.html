@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>app砍价界面</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mui.min.css" />
+    <style>
+    	.shade{display:none; background-color:rgba(0,0,0,0.8);height: 100%; z-index: 1; position: fixed; top: 0; right: 0; left: 0; bottom: 0;}
+    </style>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> 
+    <!--<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>--> 
+	<script>
+		$(document).ready(function (){
+			$('.product').children('.box').each(function(){
+				$(this).bind('click',function(){
+					$('.select_address').css('display','block');
+				});
+			})
+			$('.mui-icon-closeempty').click(function(){
+				$('.select_address').hide();
+			})
+			$('.add_new').click(function(){
+				$('.add_address').show();
+				$('.select_address').hide();
+				$('.shade').css("display","block");
+//				$('body').css({"opacity":"0.6","z-index":"3"});
+//				$('.add_address .shade').removeClass('.select_address');
+			})
+			$('.close_img').click(function(){
+				$('.add_address').hide();
+				$('.shade').css("display","none");
+			})
+			$('.added').click(function(){
+				$('.confirm').show();
+				$('.select_address').hide();
+				$('.shade').css("display","block");
+			})
+			$('.buttons').click(function(){
+				$('.confirm').hide();
+				$('.shade').css("display","none");
+			})
+		});
+	</script>
+</head>
+<body>
+<div class="shade"></div>
+<div class="banner">
+    <img src="images/banner.png" alt="">
+</div>
+
+<div class="guanggao">
+    <p>恭喜某某某砍价成功，0元拿到【lalalal】</p>
+</div>
+
+<div class="product">
+    <div class="box" id="s_box">
+        <a href="javascript:;">
+            <div class="photo"><img src="images/product.png" alt=""></div>
+            <div class="details">
+                <p>3D硬足金999 霸气龙头串珠100克 100*50m</p>
+            </div>
+            <div class="price">
+                <span>4.5万人已0元拿</span>
+                <p>原价5009元</p>
+            </div>
+            <div class="btn">
+                <p>砍价0元得</p>
+            </div>
+        </a>
+    </div>
+    <div class="box" id="s_box" >
+        <a href="javascript:;">
+            <div class="photo"><img src="images/product.png" alt=""></div>
+            <div class="details">
+                <p>3D硬足金999 霸气龙头串珠100克 100*50m</p>
+            </div>
+            <div class="price">
+                <span>4.5万人已0元拿</span>
+                <p>原价5009元</p>
+            </div>
+            <div class="btn">
+                <p>砍价0元得</p>
+            </div>
+        </a>
+    </div>
+    <div class="box" id="s_box">
+        <a href="javascript://">
+            <div class="photo"><img src="images/product.png" alt=""></div>
+            <div class="details">
+                <p>3D硬足金999 霸气龙头串珠100克 100*50m</p>
+            </div>
+            <div class="price">
+                <span>4.5万人已0元拿</span>
+                <p>原价5009元</p>
+            </div>
+            <div class="btn">
+                <p>砍价0元得</p>
+            </div>
+        </a>
+    </div>
+    <div class="box" id="s_box">
+        <a href="javascript://">
+            <div class="photo"><img src="images/product.png" alt=""></div>
+            <div class="details">
+                <p>3D硬足金999 霸气龙头串珠100克 100*50m</p>
+            </div>
+            <div class="price">
+                <span>4.5万人已0元拿</span>
+                <p>原价5009元</p>
+            </div>
+            <div class="btn">
+                <p>砍价0元得</p>
+            </div>
+        </a>
+    </div>
+    <div class="box" id="s_box">
+        <a href="javascript:;">
+            <div class="photo"><img src="images/product.png" alt=""></div>
+            <div class="details">
+                <p>3D硬足金999 霸气龙头串珠100克 100*50m</p>
+            </div>
+            <div class="price">
+                <span>4.5万人已0元拿</span>
+                <p>原价5009元</p>
+            </div>
+            <div class="btn">
+                <p>砍价0元得</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<!--<div class="footer">
+    <li><a href="javascript:;">砍价商品</a></li>
+    <li><a href="javascript:;">我的砍价</a></li>
+</div>-->
+
+
+<!--选择收货地址-->
+<div class="select_address">
+    <ul class="mui-table-view">
+        <li class="mui-table-view-cell choose">
+            <p>选择收货地址</p>
+            <a class="close-right mui-icon mui-icon-closeempty icon"></a>
+        </li>
+         <li class="mui-table-view-cell choose added">
+            <a class="mui-navigate-right">
+            	<span>古艳平，15986435655 </span>
+            	<br />
+            	<span>广东省广州市天河区麒麟新村宝信路80号</span>      
+            </a>
+        </li>
+        <li class="mui-table-view-cell choose add_new">
+            <a class="mui-navigate-right">新增收货地址</a>
+        </li>
+    </ul>
+</div>
+
+<!--添加新收获地址-->
+<div class="add_address">
+    <a href="javascript:;" class="close_img"><img src="images/close2.png" alt="关闭"></a>
+    <p>添加新收货地址</p>
+    <div class="information">
+        <input type="text" placeholder="名字" class="add_name" />
+        <input type="text" placeholder="电话" class="add_phone" />
+    </div>
+    <ul class="mui-table-view add">
+        <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">选择地区</a>
+        </li>
+    </ul>
+    <div class="det_text">
+        <img src="images/position.png" alt="">
+        <textarea class="detailed" type="text" placeholder="详细地址（如街道、小区、乡镇、村）" ></textarea>
+    </div>
+    <input class="save_btn" type="button" value="保存" />
+</div>
+
+<!--收货地址-->
+<div class="confirm">
+    <div class="addtext"> 
+        <h1>请确认您的收货地址</h1>
+        <p>古艳平，15986435655，广东省广州市天河区麒麟新村宝信路80号</p>
+    </div>
+    <div class="buttons">
+        <span>取消</span>
+        <span>确认</span>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

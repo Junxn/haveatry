@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分享页面</title>
+    <style>
+    	.shade{display:none; background-color:rgba(0,0,0,0.9); z-index: 1; position: fixed; top: 0; right: 0; left: 0; bottom: 0; }
+    	.shade_text {width:76%; height: 20rem; line-height: 8rem; position: absolute; top: 30rem; left: 50%; margin-left: -38%;}
+    	.shade p {font-size: 4rem; color: #fff;  float: left;}
+    	.shade span {font-size: 4rem; color: #fde612;  float: left;}
+    	.share_p {width: 100%; text-align: center;margin-top: 38rem;}
+        html {
+            font-size: 10px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #fb2e29;
+        }
+        .share {
+            width: 100%;
+            height: 80rem;
+            position: relative;
+            background-image: url("images/bgc.png");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .fine {
+            width: 90%;
+            height: 46rem;/*加8rem*/
+            border-radius: 2rem;
+            position: absolute;
+            top: 14rem;
+            left: 50%;
+            margin-left: -45%;
+            background-color: #fff;
+        }
+        .fine .fine-head {
+            width: 15rem;
+            height: 15rem;
+            border-radius: 15rem;
+            position: absolute;
+            top: -7rem;
+            left: 50%;
+            margin-left: -7.5rem;
+            background-color: #d0d0d0;
+        }
+        .fine .user-name {
+            font-size: 4rem;
+            position: absolute;
+            top: 16rem;
+            left: 50%;
+            font-weight: bold;
+            margin-left: -6rem;
+        }
+        .share .fine .ifine {
+            font-size: 4rem;
+            font-weight: bold;
+            position: absolute;
+            top: 16rem;
+            left: 50%;
+            margin-left: -30rem;
+            color: #000;
+        }
+        .product {
+            width: 90%;
+            height: 20rem;
+            border-radius: 2rem;
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            margin-left: -45%;
+            background-color: #eeeeee;
+        }
+        .product .photo {
+            width: 20rem;
+            height: 20rem;
+            border-radius: 2rem 0 0 2rem;
+            background-image: url(images/product.png);
+        }
+        .product .details {
+            width: 45rem;
+            height: 10rem;
+            position: absolute;
+            top: 1rem;
+            left: 22rem;
+            line-height: 5rem;
+        }
+        .product .details p {
+            font-size: 4rem;
+        }
+        .product .price {
+            font-size: 4rem;
+            font-weight: bold;
+            color: red;
+            position: absolute;
+            top: 14rem;
+            left: 21rem;
+        }
+        .money {
+            width: 80%;
+            height: 8rem;
+            position: absolute;
+            top: 64rem;
+            left: 50%;
+            margin-left: -40%;
+           
+        }
+        .money span {
+            font-size: 6rem;
+            font-weight: bold;
+            float: left;
+            display:inline-block;
+            color: #fde612;
+            margin-left: 4rem;
+        }
+        .money p {
+            font-size: 5rem;
+            font-weight: bold;
+            float: left;
+            color: #fff;
+        }
+        .share .fenxiang {
+            width: 70rem;
+            height: 10rem;
+            font-size: 4rem;
+            font-weight: bold;
+            color: red;
+            line-height: 10rem;
+            border: none;
+            border-radius: 1rem;
+            position: absolute;
+            top: 74rem;
+            left: 50%;
+            margin-left: -35rem;
+            background-color: #fff55e;
+            box-shadow: 0 1rem 0 #e9ce20;
+        }
+        .share .time {
+            font-size: 3rem;
+            letter-spacing: 0.6rem;
+            color: #fff;
+            position: absolute;
+            top: 86rem;
+            left: 50%;
+            margin-left: -24.3rem;
+        }
+        .share .help {
+            width: 86%;
+            height: 22rem;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 1rem;
+            position: absolute;
+            top: 94rem;
+            left: 50%;
+            padding: 2%;
+            margin-left: -45%;
+        }
+        .help .help-top{
+            height: 5rem;
+            line-height: 5rem;
+        }
+        .help .help-top p{
+            width: 20%;
+            text-align: center;
+            float: left;
+            font-size: 3rem;
+            color: #fff;
+        }
+        .help .help-top span{
+            width: 40%;
+            height: 0.1rem;
+            background: #fff;
+            margin-top: 2rem;
+        }
+        .help-top .help-left{
+            float: left;
+        }
+        .help-top  .help-right{
+            float: right;
+        }
+        .help .user {
+            width: 100%;
+            height: 16rem;
+        }
+        .help .user .man {
+            width: 14rem;
+            height: 14rem;
+            border-radius: 10rem;
+            float: left;
+            margin: 1.5rem 0 0 0;
+            background-color: #cecece;
+        }
+        .help .user .text {
+            float: left;
+            margin: 3rem 0 0 2rem;
+        }
+        .help .user p {
+            font-size: 4rem;
+            color: #fff;
+        }
+        .help .user span {
+            font-size: 4rem;
+            font-weight: bold;
+            float: right;
+            margin: 5rem 2rem 0 0;
+            color: #fde612;
+        }
+    </style>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> 
+	<script>
+		$(function(){
+			$('.fenxiang').click(function(){
+				$('.shade').show();
+			})
+		})
+	</script>
+</head>
+<body>
+<!--砍价分享页面-->
+<div class="shade">
+	<div class="shade_box">
+		<div class="shade_text">
+		<p>你已砍</p><span>690.74</span><p>元啦，赶快分享给好友吧</p>
+	</div>
+	<p class="share_p">分享成功后可多砍一刀哦！</p>	
+	</div>
+	
+</div>
+<div class="share">
+    <div class="fine">
+        <div class="fine-head">
+            <div class="head"></div>
+            <p class="user-name">小兔子</p>
+        </div>
+        <p class="ifine">我发现一件好货，来一起砍价0元拿吧</p>
+        <div class="box">
+            <a class="product">
+                <div class="photo">
+                    <!--<img src="images/product.png" alt="">-->
+                </div>
+                <div class="details">
+                    <p>3D硬足金999 霸气龙头串珠100克 100*50m</p>
+                </div>
+                <span class="price">￥5009</span>
+            </a>
+        </div>
+    </div>
+    <div class="money">
+        <span>690.74</span><p>元，还差</p><span>4318.26</span><p>元</p>
+    </div>
+
+    <input class="fenxiang" type="button" value="分享给好友，多砍一刀" />
+    <p class="time">还剩23:59:47.9结束，快来砍价吧～</p>
+
+    <div class="help">
+        <div class="help-top">
+            <span class="help-left"></span>
+            <p>砍价帮</p>
+            <span class="help-right"></span>
+        </div>
+        <div class="user">
+            <div class="man"></div>
+            <div class="text">
+                <p>小兔子</p><p>来一起砍价0元拿</p>
+            </div>
+            <span class="amount">砍掉49.7元</span>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

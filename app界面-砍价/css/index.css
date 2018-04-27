@@ -1,0 +1,322 @@
+html {
+    font-size: 10px;
+}
+body {
+    background-color: #ffffff;
+}
+body,p {
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+    /*width: 100%;*/
+
+}
+.banner {
+    height: 30rem;
+    background-color: #f86cff;
+}
+.banner img {
+    width: 100%;
+    height: 30rem;
+}
+.guanggao {
+    height: 7rem;
+    border-bottom: 1px solid #cccccc;
+}
+.guanggao p {
+    color: #000;
+    font-size: 4rem;
+    line-height: 7rem;
+    text-indent: 1rem;
+
+}
+
+/*产品区域*/
+.product {
+    height: auto;
+    margin-bottom: 60px;
+}
+.product .box {
+    height: 30rem;
+    margin: 6px 0;
+    border-bottom: 1px solid #bbb;
+    background-color: #fff;
+    position: relative;
+}
+.product .photo {
+    width: 30rem;
+    margin: 0 1rem;
+    float: left;
+}
+.product .photo img {
+    width: 100%;
+}
+.product .box p {
+    font-size: 4rem;
+    line-height: 5rem;
+}
+
+.product  .box .details {
+    width: 48rem;
+    height: 10rem;
+    float: left;
+    margin-top: 1rem;
+}
+.product .box .details p {
+    /*font-weight: 100;*/
+   font-weight: 500;
+    color: #000;
+}
+/*.footer {
+    width: 100%;
+    height: 4.5rem;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #cccccc;
+}*/
+.product .box .price {
+    width: 24rem;
+    height: 9rem;
+    margin-top: 3rem;
+    position: absolute;
+    bottom: 1rem;
+    left: 32rem;
+}
+.product .box .price span {
+    font-size: 3rem;
+    color: #797979;
+}
+.product .box .price p {
+    color: red;
+    line-height: 6rem;
+    font-weight: bold;
+}
+.product .box .btn {
+    width: 20rem;
+    height: 9rem;
+    position: absolute;
+    right: 3rem;
+    bottom: 1rem;
+    border-radius: 1rem;
+    background-color: red;
+}
+.product .box .btn p {
+    color: #ffffff;
+    line-height: 9rem;
+    text-align: center;
+}
+
+
+/*收货地址区域样式*/
+.confirm {
+    width: 70rem;
+    height: 35rem;
+    text-align: center;
+    position: absolute;
+    top: 50rem;
+    left: 50%;
+    z-index: 6;
+    margin-left: -35rem;
+    border-radius: 5rem;
+    background-color: #fff;
+    display: none;   
+}
+.confirm .addtext {
+    width: 70rem;
+    height: 24rem;
+    /*text-align: center;*/
+    padding: 2rem 2rem 0 2rem;
+    border-radius: 5rem 5rem 0 0;
+    border-bottom: 1px solid #000000;
+    /*background-color: #3ee8d7;*/
+
+}
+.confirm .addtext h1 {
+	width: 66rem;
+    font-size: 4rem;
+	margin: 0;
+    padding: 0;
+    line-height: 10rem;
+
+    
+}
+.confirm .addtext p {
+    font-size: 4rem;
+    line-height: 4rem;
+}
+.buttons {
+    width: 70rem;
+    height: 10rem;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    border-radius: 0 0 5rem 5rem;
+    /*background-color: #f86cff;*/
+}
+.confirm .buttons span {
+    width: 34rem;
+    height: 8rem;
+    font-size: 4rem;
+    color: #000;
+    float: left;
+    line-height: 8rem;
+    overflow: hidden;
+}
+
+
+/*底部*/
+.footer li {
+    width: 50%;
+    height: 4.5rem;
+    float: left;
+    list-style: none;
+    text-align: center;
+    background-color: #eeeeee;
+}
+.footer li a {
+    font-size: 3rem;
+    color: #000;
+    line-height: 4.5rem;
+    text-decoration: none;
+}
+.select_address {
+	width: 100%;
+	height: 70rem;
+	position: fixed;
+	bottom: 0;
+	background-color: #ffffff;
+}
+
+/*选择收货地址*/
+
+.select_address {
+    font-size: 5rem;
+    display: none;
+}
+.select_address ul li {
+    font-size: 4rem;
+    color: #000;
+}
+.select_address ul li img {
+    width: 3rem;
+}
+.select_address .choose {
+    position: relative;
+    height: 10rem;
+    line-height: 8rem;
+
+}
+.select_address .choose p {
+    font-size: 4rem;
+    color: #000;
+    float: left;
+    position: absolute;
+    left: 50%;
+    margin-left: -12rem;
+    /*line-height: 8rem;*/
+}
+.select_address .choose a {
+    font-size: 4rem;
+    color: #000 !important;
+}
+.select_address .added {
+	height: 14rem;
+	line-height: 6rem;
+	text-overflow: ellipsis;
+}
+/*.select_address .choose a::after {*/
+    /*color: #000 !important;*/
+/*}*/
+.close-right {
+    float: right;
+    font-size: 12rem;
+    line-height: 8rem !important;
+    color: #bbb;
+}
+
+/*添加新收货地址*/
+.add_address {
+    width: 70rem;
+    height: 50rem;
+    position: absolute;
+    top: 50rem;
+    left: 50%;
+    margin-left: -35rem;
+    border-radius: 2rem;
+    display: none;
+    z-index: 6;
+    background-color: #ffffff;
+}
+.add_address a img {
+    width: 6rem;
+    position: absolute;
+    margin-left: 66rem;
+    top: -2rem;
+}
+.add_address p {
+    font-size: 4rem;
+    color: #000;
+    position: absolute;
+    left: 50%;
+    margin-left: -14rem;
+    line-height: 8rem;
+}
+.add_address .information {
+    width: 100%;
+    margin: 8rem auto;
+    border-top: 1px solid #ccc;
+}
+.add_address .information input{
+    width: 50% !important;
+    float: left !important;
+    border: none;
+    height: 8rem;
+    line-height: 8rem;
+    font-size: 3rem;
+    color: #bbb;
+}
+.add_address .information .add_phone{
+    border-left: 1px solid #ccc;
+}
+.add_address .add {
+    width: 100%;
+    height: 8rem;
+    font-size: 3rem;
+    line-height: 6rem;
+    /*float: left;*/
+    position: absolute;
+    top: 16rem;
+}
+.add_address .det_text {
+    width: 100%;
+    position: relative;
+    top: 8rem;
+}
+.add_address .det_text img {
+    width: 3rem;
+    position: absolute;
+    top: 4.5rem;
+    right: 2rem;
+}
+.add_address .detailed {
+    width: 90%;
+    height: 12rem;
+    font-size: 3rem;
+    border: none;
+    line-height: 4rem;
+}
+.add_address .save_btn {
+    width: 70%;
+    height: 5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    margin-left: -35%;
+    background-color: #bbb;
+}
+
+
