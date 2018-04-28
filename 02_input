@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+       <title>input</title>
+       <style>
+       html {
+        font-size: 10px
+       }
+       body {
+        margin:0;
+        padding: 0;
+        background-color: #eee;
+       }
+        .header {
+            width: 100%;
+            height: 4rem;
+            background-color: yellowgreen;
+        }
+        .header a {
+            width: 33%;
+            font-size: 1.8rem;
+            line-height: 4rem;
+            float: left;
+            color: #fff;
+            text-decoration: none;
+            /*background-color: #f00;*/
+        }
+        .center {
+            text-align: center;
+        }
+        .left {
+            text-align: left;
+            text-indent: 1rem;
+        }
+        .right {
+            text-align: right;
+            text-indent: -2em;
+        }
+
+        .inp {
+            width: 100%;
+            overflow:hidden;
+        }
+        .inp_ii {
+            width: 100%;
+            height: 3rem;
+            margin-top: 0.5rem;
+            background-color: #000;
+            opacity: 0.6;
+        }
+        input {
+            width: 90%;
+            height: 3rem;
+            border: none;
+            text-indent: 1rem;
+            overflow: hidden;
+            background-color: transparent;
+            /*margin-left: 2rem;*/
+            outline:none;    /*取消聚焦时的蓝框*/
+        }
+        input:focus {
+            color: #fff;
+        }
+        .inp img {
+            width: 2rem;
+            height: 2rem;
+            vertical-align: middle;
+            padding-bottom: 0.5rem;
+            margin-left: 1rem;
+        }
+        .btn {
+            margin-top: 0.5rem;
+            width: 100%;
+            height: 3rem;
+            border:none;
+            color: #fff;
+            background-color: yellowgreen;
+        }
+        p {
+            font-size: 1.2rem;
+            color: green;
+            text-align: right;
+        }
+       </style>
+   </head>
+   <body>
+       <div class="header">
+           <a class="left" href="">注册</a>
+           <a class="center" href="">登录</a>
+           <a class="right" href="">关闭</a>
+       </head>
+       <div class="inp">
+           <div class="inp_ii"><img src="images/user.png" alt=""><input type="text" value="" placeholder="用户名"></div>
+           <div class="inp_ii"><img src="images/lock.png" alt=""><input type="text" value="" placeholder="密码"></div>
+       </div>
+       <button class="btn">登录</button>
+       <p>忘记密码？</p>
+   </body>
+   </html>   
